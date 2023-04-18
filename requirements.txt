@@ -49,12 +49,12 @@ location==0.0.7
 MarkupSafe==2.1.1
 messaging==1.2
 mock==5.0.0
-moviepy==1.0.3
+moviepy==1.0.2
 multidict==6.0.2
 nltk==3.7
 numpy==1.13.1
 oauthlib==3.2.2
-openai==0.25.0
+openai==0.10.3
 openpyxl==3.0.10
 outcome==1.1.0
 packaging==22.0
