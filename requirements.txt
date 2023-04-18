@@ -52,7 +52,7 @@ mock==5.0.0
 moviepy==1.0.3
 multidict==6.0.2
 nltk==3.7
-numpy==1.23.5
+numpy==1.13.1
 oauthlib==3.2.2
 openai==0.25.0
 openpyxl==3.0.10
