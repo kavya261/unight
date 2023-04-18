@@ -1,0 +1,18 @@
+2023-01-01 10:14:51,390 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-01-01 10:14:51,391 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\Mal McD\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\instabot\bot\bot.py
+2023-01-01 10:14:51,391 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2023-01-01 10:14:51,391 - instabot version: 0.117.0 (api_login) - DEBUG - Loading uuids
+2023-01-01 10:14:51,391 - instabot version: 0.117.0 (api_login) - INFO - Recovery from C:\Users\Mal McD\Desktop\UnightTests\functionality/config/hajbibiii_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=f9fe3ee6-c3d6-4377-a1f8-b5970e476425
+- uuid=075295ab-0536-451a-ba75-0d8acda91fcf
+- client_session_id=4dcb8671-ff5f-4052-a8bf-a9198b82a8d4
+- device_id=android-f729190fcd58203e
+2023-01-01 10:14:51,393 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: False
+2023-01-01 10:14:52,374 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2023-01-01 10:14:52,557 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2023-01-01 10:14:52,558 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'hajbibiii'!
+2023-01-01 10:14:52,558 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: C:\Users\Mal McD\Desktop\UnightTests\functionality/config/hajbibiii.checkpoint
+2023-01-01 10:14:55,605 - instabot version: 0.117.0 (bot_photo) - INFO - Photo 'b''' is not uploaded.
+2023-01-01 10:15:34,786 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Saving Checkpoint file to: C:\Users\Mal McD\Desktop\UnightTests\functionality/config/hajbibiii.checkpoint
+2023-01-01 10:15:34,786 - instabot version: 0.117.0 (bot) - INFO - Total requests: 31
