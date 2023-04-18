@@ -95,7 +95,6 @@ tqdm==4.64.1
 trio==0.19.0
 trio-websocket==0.9.2
 Twisted==22.10.0
-twisted-iocpsupport==1.0.2
 txaio==23.1.1
 types-pytz==2022.6.0.1
 types-toml==0.10.8.1
