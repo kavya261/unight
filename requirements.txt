@@ -109,3 +109,4 @@ zope.interface==5.5.2
 social-auth-app-django==5.2.0
 setuptools==67.6.1
 wheel==0.40.0
+psycopg2-binary==2.9.6
