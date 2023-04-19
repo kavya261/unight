@@ -521,7 +521,6 @@ app_json = 'application/json'
 clientID = 'kaveripa-unight-PRD-d5206ac65-b205be68'
 clientSecret = 'PRD-3ac6ead8c3ef-dcf1-4bbd-a421-af17'
 
-# base64.b64encode(b'kaveripa-unight-PRD-d5206ac65-b205be68' + ':' + 'Foo-1234-effe')
 
 headers = {
     'Content-Type': 'application/x-www-form-urlencoded',
