@@ -12,18 +12,26 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+import dj_database_url
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / '.env')
 
+SECRET_KEY = os.getenv('SECRET_KEY')
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
+
+# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-y6on4&^y1+^c$5_h4eh-i2fz-c6jmagos9$5b!o!%8=08s#!tm'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# SECRET_KEY = 'django-insecure-y6on4&^y1+^c$5_h4eh-i2fz-c6jmagos9$5b!o!%8=08s#!tm'
+# DEBUG = True
 
 SESSION_COOKIE_HTTPONLY = True
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
@@ -33,7 +41,7 @@ ALLOWED_HOSTS = []
 
 SITE_ID = 1
 # ACCOUNT_EMAIL_VERIFICATION = "none"
-LOGIN_REDIRECT_URL = "http://127.0.0.1:8000/"
+# LOGIN_REDIRECT_URL = "http://127.0.0.1:8000/"
 LOGIN_REDIRECT_URL = "http://127.0.0.1:8000/signin"
 
 # ACCOUNT_DEFAULT_HTTP_PROTOCOL='https'
@@ -178,11 +186,27 @@ WSGI_APPLICATION = 'Unight.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+# DATABASES = {
+#     'default': dj_database_url.parse(config('DATABASES'))
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'unightdb',
+        'USER': 'postgres',
+        'PASSWORD': 12345,
+        'HOST': '127.0.0.1',
+        'PORT': 5432,
+   }
 }
 
 # Password validation
