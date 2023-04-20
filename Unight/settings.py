@@ -198,17 +198,24 @@ WSGI_APPLICATION = 'Unight.wsgi.application'
 #     'default': dj_database_url.parse(config('DATABASES'))
 # }
 
-DATABASES = {
-   'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'unightdb',
-        'USER': 'postgres',
-        'PASSWORD': 12345,
-        'HOST': '127.0.0.1',
-        'PORT': 5433,
-   }
-}
+# DATABASES = {
+#    'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'unightdb',
+#         'USER': 'postgres',
+#         'PASSWORD': 12345,
+#         'HOST': '127.0.0.1',
+#         'PORT': 5433,
+#    }
+# }
 
+DATABASES = {
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgresql://unightdb:12345@localhost:5433/Unight',
+        conn_max_age=600
+    )
+}
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
