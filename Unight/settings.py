@@ -93,7 +93,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.spotify',
     'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.apple',
-
+    'whitenoise.runserver_nostatic',
     # 'allauth.socialaccount.providers.tiktok',
     # 'allauth.socialaccount.providers.opensea',
 ]
