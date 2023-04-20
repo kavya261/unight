@@ -20,6 +20,7 @@ urlpatterns = [
     path('signin', views.signin, name='signin'),
     path('logout', views.logout, name='logout'),
     path('etsy', views.etsyLogin, name='etsyLogin'),
-    path('ebay', views.ebaylogin, name='ebay')
+    path('ebay', views.ebaylogin, name='ebay'),
+    path('insta',views.instagram,name='insta')
     # path('chat/<str:room_name>', views.chat, name="chat")
 ]

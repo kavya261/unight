@@ -7,13 +7,16 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, auth
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from instagram.client import InstagramAPI
 
 from .models import Profile, Post, LikePost, FollowersCount, blogpost, vidpost, musicpost, forumpost, storepost, Comment
 from .upload import InstaPost
 
+client_id = '1312196812972649'
+client_secret = 'c18e25473b8ac7a63e4daf0ce749d153'
+
 
 # Create your views here.
-
 @login_required(login_url='signup')
 def index(request):
     user_object = User.objects.get(username=request.user.username)
@@ -521,7 +524,6 @@ app_json = 'application/json'
 clientID = 'kaveripa-unight-PRD-d5206ac65-b205be68'
 clientSecret = 'PRD-3ac6ead8c3ef-dcf1-4bbd-a421-af17'
 
-
 headers = {
     'Content-Type': 'application/x-www-form-urlencoded',
     'Authorization': base64.b64encode(
@@ -593,3 +595,12 @@ def etsyLogin(request):
                                                   'redirect_uri': 'http://127.0.0.1:8000/',
                                                   'scope': 'profile_r%profile_w'})
         return HttpResponse('Could not save data')
+
+
+def instagram(request):
+    api = InstagramAPI(client_id=client_id, client_secret=client_secret)
+    redirect_uri = 'http://127.0.0.1:8000/instagram/callback'
+    api.access_token = api.exchange_code_for_access_token(code=request.GET['code'], redirect_uri=redirect_uri)
+    media = api.user_recent_media(user_id='your_instagram_user_id', count=10)
+    print(media)
+    return render(request, 'index.html', {'media': media})
